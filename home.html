@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="terminal">
+        <div class="homeScreen crt">
+            <p class="robcotextTop">ROBCO INDUSTRIES UNIFIED OPERATING SYSTEM</p>
+            <p class="robcotext">COPYRIGHT 2077 ROBCO INDUSTRIES</p>
+            <p class="robcotext"> -- SERVER 4 --</p><br>
+            <p class="robcotext">=================================================</p><br>
+            <div class="homeContainer">
+                <button id="button" autofocus>>PLAY HOLOTAPE</button> <br> <br>
+                <p>
+
+                    GREETINGS, OVERSEER! I HOPE THIS MESSAGE FINDS YOU WELL AND YOUR MOVE INTO YOUR NEW POSITION HAS
+                    BEEN AN EASY TRANSITION. YOUR APPOINTMENT AS OVERSEER CAME WITH HIGH RECOMMENDATIONS FROM OUR
+                    INTERVIEWERS AND WE HOPE YOU WILL BE THE PERFECT FIT THAT EVERYONE BELIEVES YOU TO BE. GOOD LUCK!
+
+                    VAULT-TEC MANAGMENT
+
+                </p>
+            </div>
+            <p class="robcotext"></p>
+        </div>
+    </div>
+    <script>
+        let enterSound = new Audio("sounds/ui_hacking_charenter_01.wav");
+        let audio = new Audio("sounds/swingdoors.mp3");
+        let button = document.getElementById("button");
+        let isPlaying = 0;
+
+        button.addEventListener("click", play);
+
+        function play() {
+            enterSound.play();
+            if (isPlaying == 0) {
+                audio.play();
+                isPlaying++;
+                button.innerHTML = ">PAUSE HOLOTAPE";
+            } else if (isPlaying == 1) {
+                audio.pause();
+                isPlaying = 0;
+                button.innerHTML = ">PLAY HOLOTAPE";
+            }
+        }
+    </script>
+</body>
+
+</html>

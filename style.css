@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+body{
+    color: #72E26C;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+    font-weight: bold;
+    overflow-y: hidden;
+}
+
+.terminal{
+    width: 70vw;
+    height: 100vh;
+    background-image: url("img/terminal.jpeg");
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen{
+    width: 92%;
+    height: 85%;
+}
+
+.lockScreen{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loginScreen{
+    width: 100%;
+    height: 100vh;
+}
+
+.homeScreen{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.robcotext, .password{
+    margin-left: 2em;
+}
+
+.robcotextTop{
+    margin-top: 1em;
+}
+
+
+#robcotext{
+    width: 40%;
+}
+
+.attempts{
+    width: auto;
+    height: auto;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    display: flex;
+}
+
+.terminalRowWrapper{
+    width: 95%;
+    height: 85%;
+    margin-left: 2em;
+    display: flex;
+}
+
+.terminalRows{
+    width: 30%;
+    height: 100%;
+}
+
+.output{
+    width: 30%;
+    height: 100%;
+}
+.terminalRow{
+    width: 100%;
+    height: 6%;
+}
+
+span:hover{
+    color: black;
+    background-color: #72E26C;
+}
+
+input[type="text"]
+{
+    color: #72E26C;
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+input::placeholder{
+    color: #72E26C;
+  }
+
+input:focus{
+    outline: none;
+}
+
+.homeContainer{
+    width: 50%;
+    text-align: left;
+}
+
+button{
+    color: #72E26C;
+    background: transparent;
+    border: none;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+}
+
+button:hover{
+    color: black;
+    background-color: #72E26C;
+}
+
+/* crt effect from: http://aleclownes.com/2017/02/01/crt-display.html */
+.crt::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+  }
+
+

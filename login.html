@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="terminal">
+        <div class="screen crt">
+            <p class="robcotext">WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK</p> <br>
+            <p class="robcotext">> LOGON ADMIN</p><br>
+            <p class="robcotext">ENTER PASSWORD NOW</p><br>
+            <p class="password"></p>
+        </div>
+    </div>
+    <script>
+
+        let i = 0;
+        let password = ">****";
+
+        function typeWriter() {
+            if (i < password.length) {
+                document.querySelector(".password").innerHTML += password.charAt(i);
+                i++;
+            }
+            setTimeout(typeWriter, 1000);
+        }
+
+        window.onload = typeWriter();
+
+        setTimeout(function () {
+            window.location.href = "home.html";
+        }, 4500);
+
+    </script>
+</body>
+
+</html>
